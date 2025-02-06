@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Construction</title>
+    <title>Master Mind Archive</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
-
-    <!-- Header -->
     <div class="header">
         Master Mind Archive
+        <button id="themeToggle" class="cta-button">🌓 Toggle Theme</button>
     </div>
 
-    <!-- Navigation Bar -->
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="#">Courses</a>
@@ -21,17 +19,39 @@
         <a href="#">Contact</a>
     </div>
 
-    <!-- Main Content -->
     <div class="main">
         <h1>🚧 Site Under Construction 🚧</h1>
         <p>We're working on something amazing! Stay tuned for updates.</p>
         <a href="index.html" class="cta-button">Go Back to Home</a>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         © 2025 Master Mind Archive. All rights reserved.
     </div>
 
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        });
+
+        // Load saved theme from localStorage
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+
+        // Back to Top Button Functionality
+        window.addEventListener('scroll', () => {
+            document.getElementById('backToTop').style.display = (window.pageYOffset > 200) ? 'block' : 'none';
+        });
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
