@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    background-color: #1a1a2e; /* Darker purple background */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* Ensure better scaling for older devices */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+    color: #d4af37;
+    font-size: 36px;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #6a0dad; /* Purple */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 100%; /* Make sure the button doesn't overflow */
+    width: 80%; /* Adjust the width for better responsiveness */
+    margin: 20px 0;
+}
+
+.cta-button:hover {
+    background-color: #8a2be2; /* Lighter purple */
+}
+
+/* Adjusting button for small screen sizes */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+    
+    .cta-button {
+        padding: 12px 25px; /* Adjust padding for small screens */
+        font-size: 16px; /* Slightly smaller font */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding on small screens */
+    }
+}
+
+.contact {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.contact a {
+    color: #d4af37;
+    text-decoration: none;
+}
